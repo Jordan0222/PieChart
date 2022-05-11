@@ -8,6 +8,7 @@ import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Surface
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
@@ -35,9 +36,11 @@ class MainActivity : ComponentActivity() {
                                 .padding(top = 20.dp, bottom = 20.dp),
                             textAlign = TextAlign.Center
                         )
-                        Box(
+                        Column(
                             modifier = Modifier
-                                .padding(40.dp)
+                                .fillMaxSize(),
+                            horizontalAlignment = Alignment.CenterHorizontally,
+                            verticalArrangement = Arrangement.Center
                         ) {
                             CrossFadePieChart()
                         }
